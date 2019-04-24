@@ -36,7 +36,12 @@
     }
   }
 ```
+
 #### 链表类及方法的实现
+链表根据不同的使用场景还可以实现为 单向链表、双向链表、循环链表，这里的示例为循环链表
+
+
+
 ```js
   class LinkedList {
     constructor() {
@@ -87,6 +92,16 @@
       return currNode
     }
 
+    length() {
+      let length = 0
+      let currNode = this.head
+      while (currNode.next.data !== 'head') {
+        currNode = currNode.next
+        length += 1
+      }
+      return length
+    }
+
     remove(target) {
       const node = this.find(target)
       const preNode = this.findPrevious(target)
@@ -95,5 +110,5 @@
   }
 ```
 
-[一个简单的链表的使用场景](./JosephusProblem.md)
+[一个简单的链表的使用场景-约瑟夫环](./JosephusProblem.md)
 
