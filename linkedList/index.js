@@ -61,12 +61,52 @@ class LinkedList {
     const preNode = this.findPrevious(target)
     preNode.next = node.next
   }
+
+  length() {
+    let length = 0
+    let currNode = this.head
+    while (currNode.next.data !== 'head') {
+      currNode = currNode.next
+      length += 1
+    }
+    return length
+  }
 }
 
 
-const link = new LinkedList()
-link.insert('shisongyan', 'head')
-link.insert('cailele', 'shisongyan')
-link.insert('caixiaojie', 'cailele')
-link.movePointer(2)
-console.log(link.pointer)
+class JosephusProblem {
+  constructor(num, rule) {
+    this.num = num
+    this.rule = rule
+  }
+
+  generateSoldiers() {
+    const link = new LinkedList()
+    for (let i = 0; i < this.num; i++) {
+      if (i === 0) {
+        link.insert(`soldier-${i + 1}`, 'head')
+      } else {
+        link.insert(`soldier-${i + 1}`, `soldier-${i}`)
+      }
+    }
+    return link
+  }
+
+  startKill(soldiers) {
+    while (soldiers.length() !== 2) {
+      soldiers.movePointer(this.rule)
+      soldiers.remove(soldiers.pointer.data)
+    }
+    soldiers.display()
+  }
+
+  startGame() {
+    const soldiers = this.generateSoldiers()
+    const survivor = this.startKill(soldiers)
+    return survivor
+  }
+}
+
+
+const p = new JosephusProblem(41, 3)
+p.startGame()

@@ -5,7 +5,7 @@
   然而 Josephus 和他的朋友并不想遵从，他将朋友与自己安排在第 16 个与第 31 个位置，于是逃过了这场死亡游戏。
 
 
-##### 常规方法使用数组递归
+##### 常规方法 使用数组递归
 ```js
   class JosephusProblem {
 
@@ -66,10 +66,49 @@
 ```
 
 
-##### 链表方法  [关于链表](./LinkedList.md)
+##### 链表方法  [关于链表以及链表的实现](./LinkedList.md)
 
 
+```js
 
+  class JosephusProblem {
+    constructor(num, rule) {
+      this.num = num
+      this.rule = rule
+    }
+
+    generateSoldiers() {
+      const link = new LinkedList()
+      for (let i = 0; i < this.num; i++) {
+        if (i === 0) {
+          link.insert(`soldier-${i + 1}`, 'head')
+        } else {
+          link.insert(`soldier-${i + 1}`, `soldier-${i}`)
+        }
+      }
+      return link
+    }
+
+    startKill(soldiers) {
+      while (soldiers.length() !== 2) {
+        soldiers.movePointer(this.rule)
+        soldiers.remove(soldiers.pointer.data)
+      }
+      return soldiers
+    }
+
+    startGame() {
+      const soldiers = this.generateSoldiers()
+      const survivor = this.startKill(soldiers)
+      return survivor
+    }
+  }
+
+
+  const p = new JosephusProblem(41, 3)
+  const survivor = p.startGame()
+
+```
 
 
 
