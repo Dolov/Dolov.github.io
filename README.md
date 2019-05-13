@@ -14,6 +14,7 @@
 # React
 
 - [React 绑定 this 的原因及方式](./ReactBindThis.md)
+- [React 穿透获取被高级组件装饰的目标组件实例](./ReactGetRef.md)
 
 # ES6
 
