@@ -8,8 +8,8 @@
 
 # Data Structure and Algorithms
 
-- [链表](./LinkedList/LinkedList.md)
-- [约瑟夫环问题](./LinkedList/JosephusProblem.md)
+- [链表](./Algorithms/LinkedList.md)
+- [约瑟夫环问题](./Algorithms/JosephusProblem.md)
 
 # React
 
