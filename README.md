@@ -8,14 +8,14 @@
 
 # Data Structure and Algorithms
 
-- [链表](./LinkedList.md)
-- [约瑟夫环问题](./JosephusProblem.md)
+- [链表](./LinkedList/LinkedList.md)
+- [约瑟夫环问题](./LinkedList/JosephusProblem.md)
 
 # React
 
-- [React 绑定 this 的原因及方式](./ReactBindThis.md)
-- [React 穿透获取被高级组件装饰的目标组件实例](./ReactGetRef.md)
+- [React 绑定 this 的原因及方式](./React/ReactBindThis.md)
+- [React 穿透获取被高级组件装饰的目标组件实例](./React/ReactGetRef.md)
 
 # ES6
 
-- [ES6 Symbol 使用场景](./Symbol.md)
+- [ES6 Symbol 使用场景](./ES6/Symbol.md)

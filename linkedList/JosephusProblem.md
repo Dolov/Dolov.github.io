@@ -111,20 +111,3 @@
   const survivor = p.startGame()
 
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
