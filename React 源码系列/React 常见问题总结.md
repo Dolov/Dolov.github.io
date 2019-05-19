@@ -2,7 +2,7 @@
 
 - 如何穿透外层组件获取组件实例
 
-- children 为什么类型，以及根本原因
+- children 可能为那些类型
 
 - React.forwordRef 做了什么
 
