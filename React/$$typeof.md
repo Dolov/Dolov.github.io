@@ -4,7 +4,7 @@
 
 ## $$typeof 是如何添加在 React 对象上的
 
-jsx 语法在被 babel 解析的时候调用 React.createElement 方法，那么我们看一下 [createElement](https://github.com/Dolov/react/blob/master/packages/react/src/ReactElement.js) 方法的实现
+jsx 语法在被 babel 解析的时候调用 React.createElement 方法，那么我们看一下 createElement 方法的实现
 
 ```js
 export function createElement(type, config, children) {
@@ -23,7 +23,7 @@ export function createElement(type, config, children) {
 }
 ```
 
-createElement 方法返回了 ReactElement 方法的执行结果，那么看一下 [ReactElement](https://github.com/Dolov/react/blob/master/packages/react/src/ReactElement.js) 方法的实现
+createElement 方法返回了 ReactElement 方法的执行结果，那么看一下 ReactElement 方法的实现
 
 ```js
 const ReactElement = function(type, key, ref, self, source, owner, props) {
