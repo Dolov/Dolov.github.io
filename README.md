@@ -14,7 +14,7 @@
 # React
 
 - [React 绑定 this 的原因及方式](./React/ReactBindThis.md)
-- [React 组件为什么有 $$typeof 属性](./React/$$typeof.md)
+- [React 组件为什么有 $$typeof 属性](./React/typeof.md)
 - [React 穿透获取被高级组件装饰的目标组件实例](./React/ReactGetRef.md)
 
 # ES6
