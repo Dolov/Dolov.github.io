@@ -7,6 +7,7 @@
 - [基于 React 的组织架构可拖拽图表组件 rc-org-chart](https://github.com/Dolov/rc-org-chart)
 - [基于 React 的可配置表单组件 可支持多种字段类型 rc-dynamic-form](https://github.com/Dolov/rc-dynamic-form)
 - [基于 Taro 的树组件 支持单选、多选、异步加载 taro-tree](https://github.com/Dolov/taro-tree)
+- [基于 Taro 的级联组件 支持异步加载 taro-tree](https://github.com/Dolov/taro-cascader)
 
 # Data Structure and Algorithms
 
