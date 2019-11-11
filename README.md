@@ -24,3 +24,6 @@
 
 - [ES6 Symbol 使用场景](./ES6/Symbol.md)
 - [JS 如何区分函数与类](./ES6/HowtoDistinguishFunctionsandClasses.md)
+
+# 重学前端系列
+
