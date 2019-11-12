@@ -31,7 +31,7 @@
         现已年末，再次翻开这个课程才意识到这其中的精髓。
     </summary>
 
-- [HTML 语义化](./RelearnFe/HTMLsemantic.md)
+- [语义化 HTML](./RelearnFe/HTMLsemantic.md)
 </details>
 
 
