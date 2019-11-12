@@ -46,7 +46,7 @@ em 是英文 emphasize 的缩写，意思为强调。
 <p>我今天吃了一个<em>苹果</em></p>  
 <p>我今天吃了<em>一个</em>苹果</p>
 
-上面两句话，第一句强调的是苹果第二句强调的是今天。所以如果有需要强调某个词语的时候就应该使用 em 标签，如果但是是为了斜体显示则使用 i 标签。
+上面两句话，第一句强调的是苹果第二句强调的是今天。所以如果有需要强调某个词语的时候就应该使用 em 标签，如果仅仅是为了斜体显示则使用 i 标签。
 
 ## strong
 > strong 标签和 em 标签一样，用于强调文本，但它强调的程度更强一些。
@@ -57,8 +57,8 @@ em 是英文 emphasize 的缩写，意思为强调。
 
 > aside 元素表示一个和其余页面内容几乎无关的部分，被认为是独立于该内容的一部分并且可以被单独的拆分出来而不会使整体受影响。其通常表现为侧边栏或者标注框（call-out boxes）。
 
-- 被包含在article元素中作为主要内容的附属信息部分，其中的内容可以是与当前文章有关的相关资料、名次解释，等等。
-- 在article元素之外使用作为页面或站点全局的附属信息部分。最典型的是侧边栏，其中的内容可以使友情链接，博客中的其它文章列表、广告单元等。
+- 被包含在 article 元素中作为主要内容的附属信息部分，其中的内容可以是与当前文章有关的相关资料、名次解释，等等。
+- 在 article 元素之外使用作为页面或站点全局的附属信息部分。最典型的是侧边栏，其中的内容可以使友情链接，博客中的其它文章列表、广告单元等。
 
 ## hgroup
 > hgroup 标签用于对网页或区段（section）的标题进行组合。
@@ -95,6 +95,49 @@ em 是英文 emphasize 的缩写，意思为强调。
 > 通常出现在尾部，包含一些作者信息、相关链接、版权信息等。
 
 
+## hr
+
+> hr 元素表示段落级元素之间的主题转换（例如，一个故事中的场景的改变，或一个章节的主题的改变）
+
+在还原设计稿的时候通常会遇到很长的横线，有很多方法都能实现这个横线，border、hr、伪类、高度元素等，所以在不同的场景使用不同的实现方法。
+
+
+## blockquote
+
+> blockquote 元素（或者 HTML 块级引用元素），代表其中的文字是引用内容。通常在渲染时，这部分的内容会有一定的缩进（注 中说明了如何更改）。若引文来源于网络，则可以将原内容的出处 URL 地址设置到 cite 特性上，若要以文本的形式告知读者引文的出处时，可以通过 <cite> 元素。
+
+```html
+<blockquote cite="https://www.huxley.net/bnw/four.html">
+    <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
+    <footer>—Aldous Huxley, <cite>Brave New World</cite></footer>
+</blockquote>
+```
+<blockquote cite="https://www.huxley.net/bnw/four.html">
+    <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
+    <footer>—Aldous Huxley, <cite>Brave New World</cite></footer>
+</blockquote>
+
+
+## time
+
+> time 标签用来表示24小时制时间或者公历日期，若表示日期则也可包含时间和时区。
+
+```html
+<p>The concert starts at <time>20:00</time>.</p>
+
+<p>This article was created on <time pubdate>2011-01-28</time>.</p>
+
+<p>The concert took place on <time datetime="2001-05-15 19:00">May 15</time>.</p>
+```
+
+## figure
+
+> 用于表示与主文章相关的图片，代码、表格等流内容。
+
+
+## dfn
+
+> dfn 标签是用来包裹被定义的名词。
 
 
 # 参考
