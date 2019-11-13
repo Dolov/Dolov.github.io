@@ -139,6 +139,126 @@ em 是英文 emphasize 的缩写，意思为强调。
 
 > dfn 标签是用来包裹被定义的名词。
 
+```html
+<p><dfn>硬核</dfn>作为网络流行语的该词，原本的含义为形容摇滚乐的分支之一硬核，比如硬核朋克，是更具有力量感的音乐形式，热情奔放猛烈强劲。但不知何时被作为网络语而流行了起来，甚至有了调侃的意思。</p>
+```
+
+
+## pre
+
+> pre 元素表示预定义格式文本。在该元素中的文本通常按照原文件中的编排，以等宽字体的形式展现出来，文本中的空白符（比如空格和换行符）都会显示出来。(紧跟在 pre 开始标签后的换行符也会被省略)
+
+```html
+<pre>
+    html
+  js     css      
+</pre>
+```
+
+<pre>
+    html
+  js     css      
+</pre>
+
+
+## samp
+
+> samp 元素用于标识计算机程序输出
+
+```html
+<pre>
+    <samp>
+        GET /home.html HTTP/1.1
+        Host: www.example.org
+    </samp>
+</pre>
+```
+<pre>
+<samp>
+GET /home.html HTTP/1.1
+Host: www.example.org
+</samp>
+</pre>
+
+
+## code
+
+> code 元素呈现一段计算机代码。
+
+```html
+<code>
+    const a = 123
+</code>
+```
+
+<code>
+    const a = 123
+</code>
+
+
+## kbd
+
+> kbd 标签经常用在于计算机相关的文档和手册中，定义键盘文本。
+
+```html
+键入 <kbd>quit</kbd> 来退出程序，或者键入 <kbd>menu</kbd> 来返回主菜单
+```
+
+键入 <kbd>quit</kbd> 来退出程序，或者键入 <kbd>menu</kbd> 来返回主菜单
+
+## var 
+
+> var 元素表示数学表达式或编程上下文中的变量。
+
+```html
+<p> 一个简单的方程：<var>x</var> = <var>y</var> + 2 </p>
+```
+
+<p> 一个简单的方程：<var>x</var> = <var>y</var> + 2 </p>
+
+
+## small
+
+> small元素將使文本的字体变小一号。(例如从大变成中等，从中等变成小，从小变成超小)。在HTML5中，除了它的样式含义，这个元素被重新定义为表示边注释和附属细则，包括版权和法律文本。
+
+## s
+
+> s 元素 使用删除线来渲染文本。使用 s 元素来表示不再相关，或者不再准确的事情。
+
+> 经常用于电商领域表示打折前的价格。
+
+
+## del
+
+> del 定义文档中已被删除的文本。
+
+页面效果跟 s 一样，意义不同。
+
+## ins
+
+> ins 标签定义已经被插入文档中的文本。
+
+```html
+<p>My favorite color is <del>blue</del> <ins>red</ins>!</p>
+```
+<p>My favorite color is <del>blue</del> <ins>red</ins>!</p>
+
+
+## i
+
+> i 用于表现因某些原因需要区分普通文本的一系列文本。例如技术术语、外文短语或是小说中人物的思想活动等，它的内容通常以斜体显示。
+
+
+## b
+
+> 通常作为关键字使用。
+
+## u
+
+> u 元素使文本在其内容的基线下的一行呈现下划线。文本标记为中文文本中的专有名称，或 将文本标记为拼写错误。
+
+
+
 
 # 参考
 - [HTML语义：div和span不是够用了吗？](https://time.geekbang.org/column/article/78158)
