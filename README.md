@@ -10,6 +10,8 @@
 - [基于 Taro 的级联组件 支持异步加载 taro-tree](https://github.com/Dolov/taro-cascader)
 
 
+
+
 ## React
 
 - [React 绑定 this 的原因及方式](./React/ReactBindThis.md)
@@ -17,10 +19,23 @@
 - [React 穿透获取被高级组件装饰的目标组件实例](./React/ReactGetRef.md)
 
 
+
+
 ## ES6
 
 - [ES6 Symbol 使用场景](./ES6/Symbol.md)
-- [JS 如何区分函数与类](./ES6/HowtoDistinguishFunctionsandClasses.md)
+
+
+
+
+
+
+## 小技巧
+
+- [Chrome 浏览器调试小技巧](./ChromeDebugging/index.md)
+- [JS 如何区分函数与类](./small/HowtoDistinguishFunctionsandClasses.md)
+
+
 
 
 ## 重学前端
@@ -35,9 +50,17 @@
 </details>
 
 
+
+
+
+
 ## 项目跨坑总结
 
 - [移动端下拉选项导致 body 滚动的问题](./ProjectHoles/bodyScroll/bodyScroll.md)
+
+
+
+
 
 
 
