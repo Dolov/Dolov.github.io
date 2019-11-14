@@ -14,7 +14,9 @@
     body {
         height: 2000px;
     }
-    
+    #chooseCity {
+        font-size: 60px;
+    }
     #mask {
         position: fixed;
         top: 0;
@@ -69,6 +71,7 @@
     const button = document.getElementById('chooseCity')
     const modal = document.getElementById('modal')
     const mask = document.getElementById('mask')
+    const body = document.getElementsByTagName('body')[0]
     modal.style.display = "none"
     button.addEventListener('click', () => {
         toggle(modal)
@@ -79,8 +82,12 @@
     const toggle = element => {
         if (element.style.display === 'none') {
             element.style.display = 'block'
+            // body.style.overflow = 'hidden'
+            body.style.background = 'pink'
         } else {
             element.style.display = 'none'
+            // body.style.overflow = 'auto'
+            body.style.background = 'white'
         }
     }
 </script>
