@@ -12,6 +12,7 @@
         padding: 0;
     }
     body {
+        width: 100%;
         height: 2000px;
     }
     #chooseCity {
@@ -34,12 +35,17 @@
         bottom: 0;
         height: 300px;
         overflow: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     ul li {
         list-style: none;
         padding: 8px 16px;
         border-bottom: 1px solid rgb(202, 196, 196);
+    }
+
+    html {
+        width: 100%;
     }
     
 </style>
@@ -72,6 +78,7 @@
     const modal = document.getElementById('modal')
     const mask = document.getElementById('mask')
     const body = document.getElementsByTagName('body')[0]
+    const html = document.getElementsByTagName('html')[0]
     modal.style.display = "none"
     button.addEventListener('click', () => {
         toggle(modal)
@@ -82,12 +89,22 @@
     const toggle = element => {
         if (element.style.display === 'none') {
             element.style.display = 'block'
-            // body.style.overflow = 'hidden'
             body.style.background = 'pink'
+            // body.style.overflow = 'hidden'
+            // body.style.position = 'fixed'
+
+            body.addEventListener('touchmove', e => {
+                // e.preventDefault()
+                // return false
+                console.log(e, 'ee')
+                // e.preventDefault()
+                // e.returnValue = false
+            }, {passive: false })
         } else {
             element.style.display = 'none'
-            // body.style.overflow = 'auto'
             body.style.background = 'white'
+            // body.style.overflow = 'auto'
+            // body.style.position = 'static'
         }
     }
 </script>
