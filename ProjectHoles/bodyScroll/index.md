@@ -7,7 +7,7 @@
 前几天在做移动端项目遇到了遇到了一个小问题，点击页面上的字段，弹出选择城市的弹层，滚动弹层到底部的时候会引起 body 的滚动。虽然不影响页面功能，但是对于用户体验还是有影响的。
 
 <div align="center">
-    <img src="./bodyScroll1.gif" width="800"  />
+    <img src="./scroll.gif" width="800"  />
 </div>
 
 [代码地址](./index.html)

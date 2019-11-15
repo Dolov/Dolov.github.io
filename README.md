@@ -56,8 +56,8 @@
 
 ## 项目跨坑总结
 
-- [移动端下拉选项导致 body 滚动的问题](./ProjectHoles/bodyScroll/bodyScroll.md)
-- [Taro 跨平台问题总结](./ProjectHoles/bodyScroll/bodyScroll.md)
+- [移动端下拉选项导致 body 滚动的问题](./ProjectHoles/bodyScroll/index.md)
+- [Taro 跨平台问题总结](./ProjectHoles/taro/index.md)
 
 
 
