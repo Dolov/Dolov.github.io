@@ -31,6 +31,8 @@
 
 - weapp 端不能定义 jsx 变量
   
+- 以 render 开头的 props 只能传入包含一个 JSX 元素的 JSX 表达式。
+  
 ```js
 
   // wrong
@@ -40,8 +42,21 @@
 
 - weapp 端每个文件只能定义导出一个组件。导出了一个组件后，就不能再导出其他变量、方法。
 
-- weapp 端 render 方法会提前执行，所有对于对象的取值，必须加上兼容处理
+- weapp 端 render 方法会提前执行，所以对于对象的取值，需要加上兼容处理。
 
 ```js
   
+  render() {
+    const { name, id } = this.props.params || {}
+  }
 ```
+
+- weapp 端 this.props 不支持使用 rest property 语法，需要把每一个 prop 都单独列出来。应该是在 1.3.18 版本之后会命令行中有报错说明的。
+
+- 当项目中出现语法报错并更改代码之后，命令行中会出现警告 <samp>"出现文件没有被引用到，不会被编辑"</samp> 这个时候需要重启一下服务。
+
+- 1.3.18 版本， weapp 端使用 Context, 当 Context 值变化的时候 PureComponent 子组件不会更新。 (1.3.19 版本，weapp 和 h5 端都存在此问题) 
+  
+- 1.3.18 版本， h5 端使用 Context, 当父组件的状态变更引起子组件更新的时候，子组件的 this.context 结构会发生变化。
+
+  
