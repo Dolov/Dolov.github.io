@@ -1,0 +1,22 @@
+<script>
+
+	const person = {
+		name: 'shi',
+		age: 18,
+		[Symbol.iterator]() {
+			const keys = Object.keys(this)
+			let i = 0
+			return {
+				next() {
+					return { value: keys[i++], done: i > keys.length }
+				}
+			}
+		}
+	}
+
+
+	for (const i of person) {
+		console.log(i)
+	}
+
+</script>

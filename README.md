@@ -47,6 +47,7 @@
     </summary>
 
 - [语义化 HTML](./RelearnFe/HTMLsemantic.md)
+- [js 数据类型的细节](./RelearnFe/js类型细节.md)
 </details>
 
 
