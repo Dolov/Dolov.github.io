@@ -1,22 +1,30 @@
 <script>
 
-	const person = {
-		name: 'shi',
-		age: 18,
-		[Symbol.iterator]() {
-			const keys = Object.keys(this)
-			let i = 0
-			return {
-				next() {
-					return { value: keys[i++], done: i > keys.length }
-				}
-			}
-		}
-	}
+	
+	
+// const n = new Number(1)
+// n.valueOf = function() {
+//     console.log('valueOf')
+//     return 
+// }
 
+// n.toString = function() {
+//     console.log('toString')
+//     return 
+// }
 
-	for (const i of person) {
-		console.log(i)
-	}
+// // console.log(n - 1)
+// console.log(String(n))
+
+// console.log({}.toString())
+// console.log({}.valueOf())
+
+// var o = {
+//         valueOf : () => {console.log("valueOf"); return 1},
+//         toString : () => {console.log("toString"); return {}}
+//     }
+
+//     o * 2
+
 
 </script>
