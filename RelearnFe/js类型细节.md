@@ -95,3 +95,24 @@
 对象在转化为 number 类型时优先执行 valueOf 方法，如果转化失败再执行 toString 方法。
 转化为 string 类型则反之。(这两个方法在对象的原型链上)
 
+在 ES6 之后，还允许对象通过 Symbol.toPrimitive 来覆盖原有的行为。
+
+```js
+	const person = {
+		[Symbol.toPrimitive](type) {
+			// type: default | number | string
+			return 1
+		}
+	}
+
+	console.log(+person)   // 1
+```
+
+
+
+
+# 参考
+- [JavaScript类型：关于类型，有哪些你不知道的细节？](https://time.geekbang.org/column/article/78884)
+- [toString方法和valueOf方法以及Symbol.toPrimitive方法的学习](https://segmentfault.com/a/1190000016300245)
+- [Symbol.toPrimitive  MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)
+- [Symbol.iterator  MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator)
