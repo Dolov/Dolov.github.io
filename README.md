@@ -32,7 +32,7 @@
 
 ## 小技巧
 
-- [Chrome 浏览器调试小技巧](./ChromeDebugging/index.md)
+- [Chrome 浏览器调试小技巧](./Chrome/debugging.md)
 - [JS 如何区分函数与类](./small/HowtoDistinguishFunctionsandClasses.md)
 
 
@@ -60,6 +60,7 @@
 
 - [移动端下拉选项导致 body 滚动的问题](./ProjectHoles/bodyScroll/index.md)
 - [Taro 跨平台问题总结](./ProjectHoles/taro/index.md)
+- [记 Chorme 升级引起的 bug](./Chrome/chrome升级引起的bug.md)
 
 
 
