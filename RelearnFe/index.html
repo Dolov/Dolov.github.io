@@ -1,46 +1,7 @@
 <script>
 
-	
-	
-// const n = new Number(1)
-// n.valueOf = function() {
-//     console.log('valueOf')
-//     return 
-// }
-
-// n.toString = function() {
-//     console.log('toString')
-//     return 
-// }
-
-// // console.log(n - 1)
-// console.log(String(n))
-
-// console.log({}.toString())
-// console.log({}.valueOf())
-
-// var o = {
-//         valueOf : () => {console.log("valueOf"); return 1},
-//         toString : () => {console.log("toString"); return {}}
-//     }
-
-//     o * 2
-
-var o = { 
-    valueOf : () => {console.log("valueOf"); return 2}, 
-    toString : () => {console.log("toString"); return "hahahha"} 
-} 
 
 
-
-const person = {
-		[Symbol.toPrimitive](type) {
-			// type: default | number | string
-			return "1"
-		}
-	}
-
-	console.log(person-0)   // 1
-
-
+var o = { [Symbol.toStringTag]: "MyObject" }
+    console.log(o + "");
 </script>
