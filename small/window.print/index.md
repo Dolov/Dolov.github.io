@@ -19,14 +19,7 @@
 
 window.print() 方法非常不方便的地方是无法通过传参的方式对打印操作进行设置，需要在 css 中进行设置。
 
-### 设置打印方向
-默认的打印方向是纵向的，可以通过 css 设置为横向打印
-- 横向 <code>@page { size: landscape; }</code>
-- 纵向 <code>@page { size: portrait; }</code>
-
-设置了打印方向之后，浏览器打印弹窗中无法再次进行打印方向的设置
-
-### 打印的样式
+### 设置打印的样式
 当需要针对打印的内容设置特殊的样式，比如隐藏部分区域、对某个区域设置特殊的字体大小。
 
 - 当样式内容比较多时，可以通过外链样式表。
@@ -44,3 +37,31 @@ window.print() 方法非常不方便的地方是无法通过传参的方式对�
         }
     }
 ```
+
+### 设置打印的区域
+有些场景下需要打印页面中部分区域内容
+
+- 通过设置打印样式，将不需要打印的内容设置为 <code>display: none</code>, 只留下需要打印的区域。
+- 获取需要打印的 dom 节点，替换当前 body 下的节点。完成打印后恢复 body 下的节点。
+
+```js
+    const bodyHtml = document.body.innerHTML
+    const printContentHtml = document.getElementById('print').innerHTML
+    document.body.innerHTML= printContentHtml
+    window.print()
+    document.body.innerHTML = bodyHtml
+```
+
+- 动态创建一个不可见的 iframe, 将需要打印的 dom 节点插入 iframe 内，调用 iframe 的 print 方法。
+
+```js
+    
+```
+
+### 设置打印的方向
+默认的打印方向是纵向的，可以通过 css 设置为横向打印
+- 横向 <code>@page { size: landscape; }</code>
+- 纵向 <code>@page { size: portrait; }</code>
+
+设置了打印方向之后，浏览器打印弹窗中无法再次进行打印方向的设置
+
