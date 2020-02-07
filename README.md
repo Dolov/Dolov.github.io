@@ -34,6 +34,7 @@
 
 - [Chrome 浏览器调试小技巧](./Chrome/debugging.md)
 - [JS 如何区分函数与类](./small/如何区分类和函数.md)
+- [浏览器打印 window.print](./small/window.print/index.md)
 
 
 
