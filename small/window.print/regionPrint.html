@@ -8,8 +8,16 @@
 </head>
 <body>
     <h1>浏览器打印 window.print 区域打印</h1>
-    <div>
-        要打印的内容
+    <div id="print">
+        <b style="color:red">要打印的内容</b>
     </div>
 </body>
+<script>
+    const printContentHtml = document.getElementById('print').innerHTML
+    const printPage = window.open()
+    printPage.document.write(printContentHtml)
+    printPage.document.close()
+    printPage.print()
+    printPage.close()
+</script>
 </html>

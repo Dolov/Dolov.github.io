@@ -41,7 +41,7 @@ window.print() 方法非常不方便的地方是无法通过传参的方式对�
 ### 设置打印的区域
 有些场景下需要打印页面中部分区域内容
 
-- 通过设置打印样式，将不需要打印的内容设置为 <code>display: none</code>, 只留下需要打印的区域。
+- 通过设置打印样式，将不需要打印的内容设置为 <code>display: none</code>，只留下需要打印的区域。
 - 获取需要打印的 dom 节点，替换当前 body 下的节点。完成打印后恢复 body 下的节点。
 
 ```js
@@ -52,10 +52,27 @@ window.print() 方法非常不方便的地方是无法通过传参的方式对�
     document.body.innerHTML = bodyHtml
 ```
 
-- 动态创建一个不可见的 iframe, 将需要打印的 dom 节点插入 iframe 内，调用 iframe 的 print 方法。
+- 动态创建一个不可见的 iframe, 将需要打印的 dom 节点插入 iframe 内，调用 iframe 的 print 方法。(推荐)
 
 ```js
-    
+    const printContentHtml = document.getElementById('print').innerHTML
+    const iframe = document.createElement('iframe')
+    iframe.setAttribute('style', 'position:absolute;width:0px;height:0px;left:-500px;top:-500px;')
+    document.body.appendChild(iframe)
+    iframe.contentDocument.write(printContentHtml)
+    iframe.contentDocument.close()
+    iframe.contentWindow.print()
+    document.body.removeChild(iframe)
+```
+- 在新打开的页面中进行打印
+  
+```js
+    const printContentHtml = document.getElementById('print').innerHTML
+    const printPage = window.open()
+    printPage.document.write(printContentHtml)
+    printPage.document.close()
+    printPage.print()
+    printPage.close()
 ```
 
 ### 设置打印的方向
