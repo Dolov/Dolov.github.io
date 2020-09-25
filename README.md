@@ -62,6 +62,7 @@
 - [移动端下拉选项导致 body 滚动的问题](./ProjectHoles/bodyScroll/index.md)
 - [Taro 跨平台问题总结](./ProjectHoles/taro/index.md)
 - [记 Chorme 升级引起的 bug](./Chrome/chrome升级引起的bug.md)
+- [以 web-view 嵌入在小程序中 h5 页面，如何处理附件下载](./ProjectHoles/fileInWeapp/index.md)
 
 
 
